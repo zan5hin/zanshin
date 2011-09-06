@@ -1440,6 +1440,8 @@ Redirect 301 /blogs/\d{4}_\d{2}.html http://zanshin.net/archives/
 #Redirect 301 /blogs/2007_11.html http://zanshin.net/2007/11/
 #Redirect 301 /blogs/2007_12.html http://zanshin.net/2007/12/
 
+# redirect old wordpress media links to images folder
+RedirectMatch 301 /wp-content/uploads/\d{4}/\d{2}/(.*) http://zanshin.net/images/$1
 
 # ErrorDocument
 ErrorDocument 401 /401/index.html
