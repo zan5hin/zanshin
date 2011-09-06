@@ -6,6 +6,7 @@ comments: false
 sharing: false
 footer: true
 ---
+<p>
 I participate in a variety of social media forums. You can find me on:
 <table cellspacing="10px" cellpadding="10px" border="0px">
 	<tr>
@@ -15,14 +16,16 @@ I participate in a variety of social media forums. You can find me on:
 			<img src="/images/flickr.jpeg" width="64px" height="64" alt="Flickr"></a> </td>
 		<td><a style="text-decoration: none;" href="http://www.linkedin.com/profile/view?id=3980830" title="LinkedIn">
 			<img src="/images/linkedin.jpeg" width="64px" height="64" alt="LinkedIn"></a> </td>
+		<td><a style="text-decoration: none;" href="https://www.github.com/zan5hin" title="Github">
+			<img src="/images/github_logo.png" width="64px" height="64" alt="Github"></a> </td>
 		<td><a style="text-decoration: none;" href="https://www.facebook.com/markhnichols" title="Facebook">
 			<img src="/images/facebook.jpeg" width="64px" height="64" alt="Facebook"></a> </td>
 	</tr>
-<table>
-
-Or you can reach me via 
-<script language="JavaScript" type="text/javascript">
-//<!--
+</table>
+</p>
+<p>
+Or you can reach me via <script language="JavaScript" type="text/javascript">
+<!--
 
 function hiveware_enkoder(){var i,j,x,y,x=
 "x=\"|A&::777;797:78::797:79:;787679:;7;7;767:7=7;787:79767<76767777::75767" +
@@ -44,3 +47,4 @@ while(x=eval(x));}hiveware_enkoder();
 
 //-->
 </script>.
+</p>
