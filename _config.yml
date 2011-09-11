@@ -82,3 +82,6 @@ disqus_short_name: zanshinnet
 
 # Google Analytics
 google_analytics_tracking_id: UA-373283-1
+
+# Amazon ASINs
+asins: ["044656432X", "0743276396", "B001YT048E"]
