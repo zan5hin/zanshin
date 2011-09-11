@@ -172,19 +172,19 @@ You are now ready to use the Amazon liquid tags in postings or asides. For any i
 The ASIN is fairly easy to spot in the Amazon URL. In my case I wanted to have links to Amazon things appear (primarily) in the sidebar. So I created a new HTML file in **source/\_includes/custom/asides** called **aws.html** that looks something like this:
 
 {% codeblock %}
+{% raw %}
 <section>
   <h1>Recent Diversions</h1>
   <p> 
-	\{\{ "0743276396" | amazon_medium_image \}\}
+	{{ "0743276396" | amazon_medium_image }}
   </p>
   <p>
-	\{\{ "0743276396" | amazon_link \}\}
-	by \{\{ "0743276396" | amazon_authors \}\}
+	{{ "0743276396" | amazon_link }}
+	by {{ "0743276396" | amazon_authors }}
   </p>
 </section>
+{% endraw %}
 {% endcodeblock %}
-
-(I apologize for the the back-slashes used to escape the curly-brackets in the above example. Without them the liquid tag renders, making it useless as an example. If anyone knows how to properly embed liquid tags without them rendering, please leave a comment below and I'll update this example.)
 
 ## Site Generation
 With all the pieces in place you are ready to generate your site. During generation the ruby-aaws gem will read your .amazonrc file, and will query AWS to look up any ASINs you've included. With only two books listed in my sidebar (I don't plan on having more than two or three items at any one time) I didn't notice an appreciable increase in site generation time. But I suspect that a large(r) number of queries could slow your generation down. As always, YMMV.

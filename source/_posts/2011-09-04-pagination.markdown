@@ -6,6 +6,9 @@ comments: true
 categories: nerdliness
 link: false
 ---
+
+**Update September 11, 2011** As interesting as figuring out all of the ins and outs of pagination in Octopress was, the real issue that caused my problems was an incomplete update cycle. When you update Octopress you first pull changes from Octopress and then there are two rake commands to run, one to update styles and one to update source templates. I neglected to do the rake commands after a pull and as a result I got plugin changes without the necessary source and styling changes to make them work properly.  For a complete look at updating Octopress see the [Updating Octopress](http://octopress.org/docs/updating/ "Updating Octopress") section of the documentation.
+
 One of the risks when changing how your site is published is breaking
 links. Links from external sources and links internally from post to
 post. Toward that end I've been making great use of
@@ -42,22 +45,22 @@ produced the following code, which renders the three pagination links
 properly for my site structure.
 
 {% codeblock index.html %}
+  {% raw %}
     <nav role="pagination">
       <div>
-        \{\% if paginator.next_page \%\}
-          <a class="prev" href="\{\{paginator.next_page\}\}">&larr; Older</a>
-        \{\% endif \%\}
+        {% if paginator.next_page %}
+          <a class="prev" href="{{paginator.next_page}}">&larr; Older</a>
+        {% endif %}
         <a href="/archives">Blog Archives</a>
-        \{\% if paginator.previous_page and paginator.page > 1 \%\}
-          <a class="next" href="\{\{paginator.previous_page\}\}">Newer &rarr;</a>
-        \{\% elsif paginator.previous_page \%\}
+        {% if paginator.previous_page and paginator.page > 1 %}
+          <a class="next" href="{{paginator.previous_page}}">Newer &rarr;</a>
+        {% elsif paginator.previous_page %}
           <a class="next" href="/">Newer &rarr;</a>
-        \{\% endif \%\}
+        {% endif %}
       </div>
     </nav>
+  {% endraw %}
 {% endcodeblock %}
-
-(The Liquid tags are escaped in the above example to prevent them from rendering. In using this code you will need to strip the "\" from the code. )
 
 This code also addresses a Liquid error I was seeing where the "Newer"
 pagination link wasn't getting rendered at all. The original code was
