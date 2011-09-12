@@ -6,7 +6,7 @@ comments: true
 categories: nerdliness
 link: false
 ---
-As mentioned a couple of days ago I have [switched](http://zanshin.net/2011-08-09-shiny/ "Shiny") from using [WordPress](http://wordpress.org "WordPress") to using [Octopress](http://octopress.org "Octopress") for my website. With just one or two minor exceptions everything about the site is working as I want. I still want to tweak the font sizes and spacing a bit, and I've got some ideas for the sidebar that need incorporating, but I am very pleased overall with how the site works now.
+As mentioned a couple of days ago I have [switched](http://zanshin.net/2011/08/09/shiny/ "Shiny") from using [WordPress](http://wordpress.org "WordPress") to using [Octopress](http://octopress.org "Octopress") for my website. With just one or two minor exceptions everything about the site is working as I want. I still want to tweak the font sizes and spacing a bit, and I've got some ideas for the sidebar that need incorporating, but I am very pleased overall with how the site works now.
 
 For those of you who are interested, here's how I went about this change.
 
