@@ -1,0 +1,23 @@
+---
+layout: page
+title: "Books"
+date: 2011-09-19 09:38
+comments: true
+sharing: true
+footer: true
+currentasins: ["1933988657", "0553386794"]
+previousasins: ["0596155409", "0399157263", "B001YT048E", "044656432X", "0307717097", "B001O9CES2"]
+---
+## Curently reading
+<table>
+{% tablerow casin in page.currentasins cols: 4 %}
+  {{ casin | amazon_medium_image }}
+{% endtablerow %}
+</table>
+
+## Already read
+<table>
+{% tablerow pasin in page.previousasins cols: 8 %}
+  {{ pasin | amazon_small_image }}
+{% endtablerow %}
+</table>
