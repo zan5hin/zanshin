@@ -10,6 +10,8 @@ footer: true
 I participate in a variety of social media forums. You can find me on:
 <table cellspacing="10px" cellpadding="10px" border="0px">
 	<tr>
+	    <td><a style="text-decoration: none;" href="https://twitter.com/#!/zanshin" title="Twitter">
+			<img src="/images/twitter.png" width="64px" height="64" alt="Twitter"></a> </td>
 		<td><a style="text-decoration: none;" href="https://plus.google.com/113519831663276170684/about" title="Google+">
 			<img src="/images/google+.jpeg" width="64px" height="64" alt="Google+"></a> </td>
 		<td><a style="text-decoration: none;" href="http://www.flickr.com/photos/zanshin/" title="Flickr">
