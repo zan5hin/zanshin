@@ -85,4 +85,6 @@ h6, section h5, section section h4, section section section h3 {
 aside > section > ul > li > a { font-size: 13px; line-height: 18px; }
 hr { line-height: 18px; }
 
-
+// hover style to expand figures
+article { overflow: visible; }
+figure:hover { width: 800px; }
