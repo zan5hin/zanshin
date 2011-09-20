@@ -87,4 +87,4 @@ hr { line-height: 18px; }
 
 // hover style to expand figures
 article { overflow: visible; }
-figure:hover { width: 800px; }
+figure:hover { width: 800px; overflow: inherit; }
