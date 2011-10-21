@@ -64,6 +64,14 @@ module Jekyll
       image_url = item.image_sets.image_set[0].medium_image.url
       '<a href="%s"><img src="%s" /></a>' % [url, image_url]
     end
+    
+    def amazon_mediumleft_image(text)
+      resp = AmazonResultCache.instance.item_lookup(text)
+      item = resp.item_lookup_response[0].items[0].item[0]
+      url = CGI::unescape(item.detail_page_url.to_s)
+      image_url = item.image_sets.image_set[0].medium_image.url
+      '<a href="%s"><img src="%s" style="float:left; margin: 0px 10px;" /></a>' % [url, image_url]
+    end
 
     def amazon_large_image(text)
       resp = AmazonResultCache.instance.item_lookup(text)
@@ -72,6 +80,14 @@ module Jekyll
       image_url = item.image_sets.image_set[0].large_image.url
       '<a href="%s"><img src="%s" /></a>' % [url, image_url]
     end
+    
+    def amazon_largeleft_image(text)
+      resp = AmazonResultCache.instance.item_lookup(text)
+      item = resp.item_lookup_response[0].items[0].item[0]
+      url = CGI::unescape(item.detail_page_url.to_s)
+      image_url = item.image_sets.image_set[0].large_image.url
+      '<a href="%s"><img src="%s" style="float:left; margin: 0px 10px;" /></a>' % [url, image_url]
+    end
 
     def amazon_small_image(text)
       resp = AmazonResultCache.instance.item_lookup(text)
@@ -79,6 +95,14 @@ module Jekyll
       url = CGI::unescape(item.detail_page_url.to_s)
       image_url = item.image_sets.image_set[0].small_image.url
       '<a href="%s"><img src="%s" /></a>' % [url, image_url]
+    end
+    
+    def amazon_smallleft_image(text)
+      resp = AmazonResultCache.instance.item_lookup(text)
+      item = resp.item_lookup_response[0].items[0].item[0]
+      url = CGI::unescape(item.detail_page_url.to_s)
+      image_url = item.image_sets.image_set[0].small_image.url
+      '<a href="%s"><img src="%s" style="float:left; margin: 0px 10px;" /></a>' % [url, image_url]
     end
 
     def amazon_release_date(text)
