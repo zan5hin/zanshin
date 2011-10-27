@@ -1,0 +1,10 @@
+---
+layout: post
+title: "AppCode"
+date: 2011-10-26 14:48
+comments: true
+categories: links
+link: true
+---
+[AppCode](http://www.jetbrains.com/objc/ "AppCode") &rarr;  
+AppCode is a new Objective-C IDE from the same folks who make IntelliJ Idea. It's enough to make me consider fiddling around with Objective-C for a while.
