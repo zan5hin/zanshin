@@ -87,4 +87,4 @@ hr { line-height: 18px; }
 
 // hover style to expand figures
 article { overflow: visible; }
-figure[role="code"]:hover { width: 800px; overflow: inherit; }
+figure[role="code"]:hover, .gist:hover { width: 800px; overflow: inherit; }
