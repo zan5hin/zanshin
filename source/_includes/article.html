@@ -1,7 +1,12 @@
 {% unless page.no_header or !post.link %}
   <header>
     {% if index %}
-      <h1 class="entry-title"><a href="{{ root_url }}{{ post.url }}">{{ post.title | titlecase }}</a></h1>
+      <h1 class="entry-title">
+		  <a href="{{ root_url }}{{ post.url }}">{{ post.title | titlecase }}</a>
+	  </h1>
+	  {% if site.disqus_short_name and post.comments != false and site.disqus_show_comment_count == true and post.url %} 	<a class="commentinfo" href="{{ root_url }}{{ post.url }}#disqus_thread" data-disqus-identifier="http://zanshin.net{{ post.url }}">Comments</a>
+	  {% endif %}
+	  
     {% else %}
       <h1 class="entry-title">{{ page.title | titlecase }}</h1>
     {% endif %}
@@ -21,3 +26,10 @@
 {% else %}
 <div class="entry-content">{{ content }}</div>
 {% endif %}
+{% if post.link %}
+  <footer>
+	  {% if site.disqus_short_name and post.comments != false and site.disqus_show_comment_count == true and post.url %} 	<a class="commentinfo" href="{{ root_url }}{{ post.url }}#disqus_thread" data-disqus-identifier="http://zanshin.net{{ post.url }}">Comments</a>
+	  {% endif %}
+  </footer>
+{% endif %}
+
