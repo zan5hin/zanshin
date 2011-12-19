@@ -87,11 +87,7 @@ aside > section > ul > li > a { font-size: 13px; line-height: 18px; }
 hr { line-height: 18px; }
 
 // hover style to expand figures
+// use z-index to properly layer elements so that expanded figure overlays sidebar
 article { overflow: visible; }
-figure[role="code"]:hover, .gist:hover { width: 800px; overflow: inherit; }
-
-// set z-index for content and aside so that expanding code 
-// blocks in content are on top of aside and its content
-body > content { z-index: 2000; }
-body > aside   { z-index: 1000; }
-body > aside > flex-content { z-index: 1000; }
+figure[role="code"]:hover, .gist:hover { width: 800px; overflow: inherit; position: relative; z-index: 2;}
+aside[role="sidebar"]  { z-index: 1; }
