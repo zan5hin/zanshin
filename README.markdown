@@ -14,7 +14,7 @@ Check out [Octopress.org](http://octopress.org/docs) for guides and documentatio
 
 ## License
 
-The following directories and their contents are Copyright © 1996-2011  Mark H. Nichols. You may not reuse anything therein without my permission:
+The following directories and their contents are Copyright © Mark H. Nichols. You may not reuse anything therein without my permission:
 
 _posts/  
 images/
