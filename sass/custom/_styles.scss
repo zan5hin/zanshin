@@ -90,4 +90,6 @@ hr { line-height: 18px; }
 // use z-index to properly layer elements so that expanded figure overlays sidebar
 article { overflow: visible; }
 figure[role="code"]:hover, .gist:hover, pre:hover { width: 800px; overflow: inherit; position: relative; z-index: 2;}
+pre.line-numbers {width: 10px; }
+pre.line-numbers:hover { width: 10px; }
 aside[role="sidebar"]  { z-index: 1; }
