@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Watching Applew Win the World"
+title: "Watching Apple Win the World"
 date: 2012-01-25 15:05
 comments: true
 categories: links
