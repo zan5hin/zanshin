@@ -25,7 +25,7 @@ By default Jenkins is configured to run at `localhost:8080`. Open Jenkins in you
 ##Specify Location of Xcode  
 With the release of Xcode 4.3 Apple has changed the location of Xcode. Previously it was in `/Developer`. Now it appears as an application in `/Applications`. I ran the `xcode-select` command to specify the new location of the executables.
 
-    $ sudo xcode-select -select /Applications/Xcode.app/Contents/Developer
+    $ sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
 	
 You can verify your configuration (if you are using Xcode 4.3) like so:
 
