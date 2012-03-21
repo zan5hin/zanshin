@@ -1,0 +1,11 @@
+---
+layout: post
+title: "3D Printing"
+date: 2012-03-20 14:41
+comments: true
+categories: links
+link: true
+---
+[3D Printing](http://youtu.be/pQHnMj6dxj4 "National Geographic Known Universe - 3D Printing") &rarr;  
+<iframe width="560" height="315" src="http://www.youtube.com/embed/pQHnMj6dxj4" frameborder="0" allowfullscreen></iframe>  
+Scan an object and then re-create it via some powder and resin on a 3D printer. This changes everything.
