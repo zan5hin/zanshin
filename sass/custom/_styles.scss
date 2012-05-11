@@ -9,7 +9,21 @@ body > header > hgroup > h1 { margin-left: 55px; font-size: 60px; line-height: 7
 body > header > hgroup > h2 { margin-left: 55px; font-size: small; margin-top: -12px; color: black; }
 
 // let's center any table we encounter
-table { margin-left: auto; margin-right: auto; }
+table { margin-left: auto; margin-right: auto; margin-bottom: 15px; }
+
+// and let's make tables nicely minimal in apperance
+td {
+	padding: 0 10px 0 0 ;
+	color: black ;
+	//font-family: Verdana, Trebuchet, Sans ;
+	//font-size: 14px ;
+	line-height: 28px ;
+	border-bottom: #dddddd ;
+	border-width: 0 0 1px 0;
+	border-style: none none solid none ; }
+
+thead { font-weight: bold ; }
+
 
 // some utility stuff
 .right { float: right; }
