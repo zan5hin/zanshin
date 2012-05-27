@@ -4,8 +4,8 @@ require "stringex"
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
-ssh_user       = "markhnic@markhnichols.com"
-document_root  = "~/public_html/zanshin.net"
+ssh_user       = "markn@markn.webfactional.com"
+document_root  = "~/webapps/zanshin"
 deploy_default = "rsync"
 
 # This will be configured for you when you run config_deploy
