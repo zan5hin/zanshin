@@ -1340,6 +1340,9 @@ Redirect 301 /blogs/000117.html http://zanshin.net/1999/12/10/our-four-agreement
 # TO-DO - change to categories page, once a categories page exists
 RedirectMatch 301 /tag/.*/ http://zanshin.net/archives/
 
+# redirect old diversions page to current books page
+RedirectMatch 301 /diversions.php http://zanshin.net/books/
+
 # monthly archive redirects
 RedirectMatch 301 /blogs/\d{4}_\d{2}.html http://zanshin.net/archives/
 
