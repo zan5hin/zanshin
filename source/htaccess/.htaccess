@@ -1346,6 +1346,9 @@ RedirectMatch 301 /blogs/\d{4}_\d{2}.html http://zanshin.net/archives/
 # redirect old wordpress media links to images folder
 RedirectMatch 301 /wp-content/uploads/\d{4}/\d{2}/(.*) http://zanshin.net/images/$1
 
+# redirect old feed link to atom.xml
+RedirectMatch 301 /feed http://zanshin.net/atom.xml
+
 # ErrorDocument
 ErrorDocument 401 /401/index.html
 ErrorDocument 403 /403/index.html
