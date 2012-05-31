@@ -7,5 +7,5 @@ categories: links
 link: true
 ---
 {% img /images/poohbacca.jpg 547 436 %}  
-[In which Christopher Robin leans an expedition to Alderaan](http://imgur.com/ISaPH "In which Christopher Robin leads an expedition to Alderaan")  &rarr;  
+[In which Christopher Robin leads an expedition to Alderaan](http://imgur.com/ISaPH "In which Christopher Robin leads an expedition to Alderaan")  &rarr;  
 Poohbacca! 
