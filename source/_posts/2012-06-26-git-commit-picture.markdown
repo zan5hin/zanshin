@@ -6,7 +6,7 @@ comments: true
 categories: nerdliness
 link: false
 ---
-The other day I ran across Victor Martínez's posting about [taking your picture every time you commit](http://coderwall.com/p/xlatfq?i=9&p=1&q= "Take a photo of yourself every time you commit"). The process is simple enough, you install `imagesnap` via brew and then add a post-commit hook to any Git repository where you want to record commit pictures.
+The other day I ran across Victor Martínez's posting about [taking your picture every time you commit](http://coderwall.com/p/xlatfq?i=9&p=1&q= "Take a photo of yourself every time you commit"). The process is simple enough, you install [imagesnap](http://github.com/alexwilliamsca/imagesnap "imagesnap") via brew and then add a post-commit hook to any Git repository where you want to record commit pictures.
 
 Victor's posting also links to a tool you can use to assemble these still images into a video. I'll have to wait to have a collection of snapshots before experimenting with creating a video.
 
