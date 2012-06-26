@@ -3,7 +3,7 @@ layout: post
 title: "Updating iPhoto and Posting to Flickr"
 date: 2012-03-26 19:06
 comments: true
-categories: nerdliness, apple
+categories: nerdliness apple
 link: false
 ---
 Yesterday I posted about my [iPhoto and Flickr integration woes](http://zanshin.net/2012/03/25/iphoto-flickr-sets-dont-transfer/ "iPhoto Flickr Sets Don't Transfer"). Today I figured out how to make that integration work. In case you haven't read yesterday's posting here's a recap. I updated from an old version of iPhoto to iPhoto '11. When I authorized the new version of iPhoto to access my Flickr account the saved Flickr sets (over 200 in all) weren't recognized and iPhoto wanted to delete them from Flickr. Thirty minutes of one-on-one time with a genius at the nearby 5th Avenue Apple store did't resolve the problem.

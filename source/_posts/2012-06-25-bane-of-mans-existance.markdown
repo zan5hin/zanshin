@@ -3,7 +3,7 @@ layout: post
 title: "Bane of Man's Existence"
 date: 2012-06-25 09:52
 comments: true
-categories: life, health
+categories: life health
 link: false
 ---
 When I was in high school on of my buddies used to say that "glasses were the bane of man's existence." Based on my experiences trying to get my lens prescription updated the last couple of weeks I whole-heartedly agree with him.

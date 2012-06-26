@@ -3,7 +3,7 @@ layout: post
 title: "Hunger Games"
 date: 2012-03-26 18:39
 comments: true
-categories: book
+categories: books
 link: false
 ---
 {{ "B004XJRQUQ" | amazon_mediumleft_image }}  

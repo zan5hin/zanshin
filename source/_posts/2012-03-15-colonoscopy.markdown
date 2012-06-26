@@ -3,7 +3,7 @@ layout: post
 title: "Colonoscopy"
 date: 2012-03-15 13:53
 comments: true
-categories: health, life
+categories: health life
 link: false
 ---
 All things considered my colonoscopy experience was surprisingly good. While some parts of the process were uncomfortable none of it was horrible. Best of all I have a clean bill of health.

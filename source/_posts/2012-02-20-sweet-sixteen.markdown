@@ -3,7 +3,7 @@ layout: post
 title: "Sweet Sixteen"
 date: 2012-02-20 14:03
 comments: true
-categories: this site
+categories: site
 link: false
 ---
 Zanshin.net was registered as my domain on February 20, 1996. My little corner of the Internet is now sixteen years old. Here are some random statistics.

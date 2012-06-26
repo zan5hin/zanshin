@@ -3,7 +3,7 @@ layout: post
 title: My Understanding
 date: 2003-4-2
 comments: true
-categories: social issues
+categories: issues
 link: false
 ---
 I think I finally have an understanding of the real reason the United States is waging a war in Iraq. It isn't about oil or weapons of mass destruction. It isn't about terrorism or Saddam Hussein. It is a message to the rest of the world, friend and foe alike, that we, the United States, are the only superpower left and we can do anything we want with impunity.

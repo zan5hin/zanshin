@@ -3,7 +3,7 @@ layout: post
 title: "Inside Out"
 date: 2012-03-24 20:11
 comments: true
-categories: book
+categories: books
 link: false
 ---
 {{ "B0036S4DSI" | amazon_mediumleft_image }}  

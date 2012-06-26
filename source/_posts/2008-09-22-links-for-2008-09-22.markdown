@@ -3,7 +3,7 @@ layout: post
 title: links for 2008-09-22
 date: 2008-9-22
 comments: true
-categories: social issues
+categories: issues
 link: false
 ---
 <ul class="delicious"><li>

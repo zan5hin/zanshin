@@ -3,7 +3,7 @@ layout: post
 title: "Cell 8"
 date: 2012-02-12 20:58
 comments: true
-categories: book
+categories: books
 link: false
 ---
 {{ "1402787154" | amazon_mediumleft_image }}  

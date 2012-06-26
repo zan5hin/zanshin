@@ -3,7 +3,7 @@ layout: post
 title: "Digital Signature in Mac OS X Lion"
 date: 2012-02-16 08:33
 comments: true
-categories: apple, nerdliness
+categories: apple nerdliness
 link: false
 ---
 Mac OS X 10.7, aka Lion, adds an annotation feature to the Preview app which can be used to "digitally" sign documents. Instead of

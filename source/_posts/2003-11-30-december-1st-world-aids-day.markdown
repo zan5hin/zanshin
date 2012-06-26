@@ -3,7 +3,7 @@ layout: post
 title: December 1st ~ World AIDS Day
 date: "2003-11-30"
 comments: true
-categories: social issues
+categories: issues
 link: false
 ---
 <a href="http://linkandthink.org/"><img src="http://zanshin.net/images/aidsdaylinkandthink.gif" width="350" height="46" /></a>

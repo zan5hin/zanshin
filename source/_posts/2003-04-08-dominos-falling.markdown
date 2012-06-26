@@ -3,7 +3,7 @@ layout: post
 title: Dominos Falling
 date: 2003-4-8
 comments: true
-categories: social issues
+categories: issues
 link: false
 ---
 I've added two more dominos to my understanding of the current war in Iraq, the war on terrorism, and the erosion of personal freedoms here in the United States.

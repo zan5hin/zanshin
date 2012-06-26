@@ -3,7 +3,7 @@ layout: post
 title: "I Go Swimming"
 date: 2011-09-29 13:04
 comments: true
-categories: life, health
+categories: life health
 link: false
 ---
 In my ongoing effort to find an exercise routine that I (a) like and (b)

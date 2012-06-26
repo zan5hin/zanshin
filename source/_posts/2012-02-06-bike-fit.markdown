@@ -3,7 +3,7 @@ layout: post
 title: "Bike Fit"
 date: 2012-02-06 13:01
 comments: true
-categories: life, health
+categories: life health
 link: false
 ---
 I own three bicycles, two of which are in riding condition. The oldest, and currently not in working order bike, is built around a Trek frameset I bought while a freshman in college some 33 years ago. I added some custom wheels, and bought or repurposed parts to finish the bicycle. I rode it from 1979 until about 1988 when I bought my current road bike, a fat-tube aluminum framed Cannondale SR 900. At $900 in 1988 this was a serious purchase and I'm glad I still have this bike. It'll be an antique next year at 25 years of age. Two years ago Sibylle and I bought a pair of Giant cross bikes and have enjoyed riding them in and around our neighborhoods since then.

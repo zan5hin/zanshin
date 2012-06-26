@@ -3,7 +3,7 @@ layout: post
 title: "30 Years in IT"
 date: 2012-05-07 08:02
 comments: true
-categories: life, nerdliness
+categories: life nerdliness
 link: false
 ---
 For the past ten years or so I have posted a list with as many items as I was old on my birthday. This year I'm not going to do that. This year marks thirty (30!) years since I was first employed as a programmer.

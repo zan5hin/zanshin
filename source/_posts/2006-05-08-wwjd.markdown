@@ -3,7 +3,7 @@ layout: post
 title: WWJD
 date: 2006-5-8
 comments: true
-categories: social issues
+categories: issues
 link: false
 ---
 (As seen on <a href="http://www.inluminent.com/" title="inluminet">inluminet</a>)

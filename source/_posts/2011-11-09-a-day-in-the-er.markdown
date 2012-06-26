@@ -3,7 +3,7 @@ layout: post
 title: "A Day in the ER"
 date: 2011-11-09 08:58
 comments: true
-categories: life, health
+categories: life health
 link: false
 ---
 We spent the day in the ER yesterday. Surprisingly this was a good thing.

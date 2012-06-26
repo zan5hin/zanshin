@@ -3,7 +3,7 @@ layout: post
 title: Absolutely Nothing
 date: "2004-12-20"
 comments: true
-categories: social issues
+categories: issues
 link: false
 ---
 In the parking lot where I work there is a car sporting a bumper sticker that reads "<cite>Slavery, Fascism, Nazism, Communism were all ended by War</cite>." It just amazes me that someone would actually believe this statement.

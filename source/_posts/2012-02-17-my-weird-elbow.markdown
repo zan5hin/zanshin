@@ -3,7 +3,7 @@ layout: post
 title: "My Weird Elbow"
 date: 2012-02-17 15:09
 comments: true
-categories: life, health
+categories: life health
 link: false
 ---
 In September 1990 I joined a karate dojo, and sometime in the spring or early summer of 1992 I took part in a demo for a women's group. During the demo I was thrown and landed badly on a concrete floor. Instead of slapping the floor with my right hand, I slapped the floor with my entire forearm. My elbow was sore for several days. About a week later, as near as I remember, I had dinner with a couple I was friends with and when he shook my hand there was a popping in my elbow and a sharp burning pain. 

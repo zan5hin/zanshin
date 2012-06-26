@@ -3,7 +3,7 @@ layout: post
 title: "Make Mail Badge Show Only Personal Emails"
 date: 2012-04-12 08:07
 comments: true
-categories: nerdliness, apple
+categories: nerdliness apple
 link: false
 ---
 Recently there was an excellent hint on [Mac OS X Hints](http://hints.macworld.com "Mac OS X Hints") about how to [show only personal emails](http://hints.macworld.com/article.php?story=20120405234513127 "Make Mail badge report only personal emails") in the badge on the Apple Mail icon. I liked the hint enough that I've implemented it on my machine, with a slight modification as I have multiple mail accounts and wanted personal emails from two of those to aggregate into the unread badge.

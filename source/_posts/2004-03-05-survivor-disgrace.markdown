@@ -3,7 +3,7 @@ layout: post
 title: Survivor Disgrace
 date: 2004-3-5
 comments: true
-categories: social issues
+categories: issues
 link: false
 ---
 The behavior of the Chapera tribe last night on Survivor All Stars was disgraceful. Violence against women, whether sexual, emotional, or physical is epidemic in the world today. The words and actions of the Chapera tribe clearly show why this problem is so prevalent and why it won't go away until men stand up and speak out against the kind of shunning and dismissal that Susan experienced.

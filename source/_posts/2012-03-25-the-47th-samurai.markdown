@@ -3,7 +3,7 @@ layout: post
 title: "The 47th Samurai"
 date: 2012-03-25 20:09
 comments: true
-categories: book
+categories: books
 link: false
 ---
 {{ "B000SEKGSO" | amazon_mediumleft_image }}  

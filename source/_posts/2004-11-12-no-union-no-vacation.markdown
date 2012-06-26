@@ -3,7 +3,7 @@ layout: post
 title: No Union = No Vacation
 date: "2004-11-12"
 comments: true
-categories: social issues
+categories: issues
 link: false
 ---
 I have worked for over twenty-one years as a professional in the information technology field. Two times, earlier in my career I was faced with being in a union or labor bargaining unit as a programmer. Both times I resisted because I had bought into the media myth about unions. Today I am ruing the lack of representation I have with my employer.

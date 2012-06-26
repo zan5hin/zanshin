@@ -3,7 +3,7 @@ layout: post
 title: Inside Iraq
 date: 2007-7-26
 comments: true
-categories: social issues
+categories: issues
 link: false
 ---
 The link below is to a video shot by a British photo journalist in Iraq.  It is not easy or pleasant to watch.  However I think it is necessary to watch.  Whatever your political stance, whatever your moral code, whatever your belief system, whatever your opinion on the Iraqi war, you need to watch this video.

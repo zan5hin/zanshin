@@ -3,7 +3,7 @@ layout: post
 title: "Skip One Day of Housekeeping Get Free Wi-Fi"
 date: 2012-03-27 19:23
 comments: true
-categories: nerdliness, life
+categories: nerdliness life
 link: false
 ---
 Big city means big prices. The conference rate for our stay in New York City is over $200 per night. The regular rates are frightening. Complimentary Internet access exists solely in the lobby area of the hotel -- where there is very little available seating. Room Internet access is $14.95 per day. A six-night stay equals $90. Which is rather outrageous.

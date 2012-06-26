@@ -3,7 +3,7 @@ layout: post
 title: "iPhoto Flickr Sets Don't Transfer"
 date: 2012-03-25 20:23
 comments: true
-categories: nerdliness, apple
+categories: nerdliness apple
 link: false
 ---
 Three weeks ago in order to solve a problem with getting a VPN client to work properly on my laptop I backed up everything on the hard drive, formatted it, and [reinstalled Lion](http://zanshin.net/2012/03/06/formatting-and-reinstalling-mac-os-x-lion/ "Formatting and Reinstalling Mac OS X Lion"). I then spent the next several days reinstalling all the software and settings that I use, and recovering my data from the backup.

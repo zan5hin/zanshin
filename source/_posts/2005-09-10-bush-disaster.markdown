@@ -3,7 +3,7 @@ layout: post
 title: Bush Disaster
 date: 2005-9-10
 comments: true
-categories: social issues
+categories: issues
 link: false
 ---
 <img src="http://zanshin.net/images/bushdisaster.jpg" title="Bush Disaster">

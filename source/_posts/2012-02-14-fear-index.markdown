@@ -3,7 +3,7 @@ layout: post
 title: "Fear Index"
 date: 2012-02-14 07:12
 comments: true
-categories: book
+categories: books
 link: false
 ---
 {{ "0449008738" | amazon_mediumleft_image }}  

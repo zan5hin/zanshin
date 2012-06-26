@@ -3,7 +3,7 @@ layout: post
 title: "Hosting by WebFaction"
 date: 2012-05-28 20:55
 comments: true
-categories: this site
+categories: site
 link: false
 ---
 Careful readers of this site may notice that the hosting attribution in the footer has changed. This site, its sister [Cello](http://cello.zanshin.net "Solfége") site, my wife's [piano studio](http://sibyllekuder.com "Elfenbein Klaviermusik") and its companion [notes](http://notes.sibyllekuder.com) site, along with the [Manhattan Area Music Teacher's Association](http://manhattanareamusicteachers.org "MAMTA") site, and sites for her son, mother, Michele, and my [eponymous](http://markhnichols.com "Mark H. Nichols") site have all been moved to [WebFaction](http://www.webfaction.com/?affiliate=markn "WebFaction").

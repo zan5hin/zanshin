@@ -3,7 +3,7 @@ layout: post
 title: "Available iPhone Prices"
 date: 2012-02-08 22:31
 comments: true
-categories: nerdliness, apple
+categories: nerdliness apple
 link: false
 ---
 For the past several months I have been anticipating reaching my cell phone update eligibility date. Based on my rate plan (one of the least expensive offered) and payment history (never a late payment) I gain eligibility to purchase a new cell phone for the subsidized price 20 months into my 2-year contract. 

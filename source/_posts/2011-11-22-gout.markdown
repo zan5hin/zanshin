@@ -3,7 +3,7 @@ layout: post
 title: "Gout"
 date: 2011-11-22 12:34
 comments: true
-categories: life, health
+categories: life health
 link: false
 ---
 In the winter of 2000-2001 I developed a heel spur on my left heel. Over the

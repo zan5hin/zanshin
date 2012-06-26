@@ -3,7 +3,7 @@ layout: post
 title: Facebook About Face
 date: 2007-12-6
 comments: true
-categories: social issues
+categories: issues
 link: false
 ---
 It seems that the furor over the Beacon advertising framework in Facebook as finally reached a tipping point.  Reversing an earlier statement, <a href="http://bits.blogs.nytimes.com/" title="Bit Blog New York Times">Mark Zuckerberg has apologized</a> and Facebook now allows members to completely opt out of the Beacon "feature."

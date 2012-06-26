@@ -3,7 +3,7 @@ layout: post
 title: The Real Problem is Violence Aganst Women
 date: 2004-2-8
 comments: true
-categories: social issues
+categories: issues
 link: false
 ---
 From Cindy Richards of the <a href="http://www.suntimes.com/" title="Chicago Sun Times">Chicago Sun Times</a>:
