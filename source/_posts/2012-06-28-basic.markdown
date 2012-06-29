@@ -1,0 +1,10 @@
+---
+layout: post
+title: "BASIC"
+date: 2012-06-28 08:06
+comments: true
+categories: links
+link: true
+---
+[BASIC](http://www.bitsavers.org/pdf/dartmouth/BASIC_Oct64.pdf "BASIC") &rarr;  
+Beginner's All-purpose Symbolic Instruction Code or BASIC was the first computer language I learned back in 1977.
