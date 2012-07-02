@@ -1,8 +1,10 @@
 RewriteEngine on
 RewriteBase /
 
-RewriteCond %{HTTP_HOST} ^www\.zanshin\.net$
-RewriteRule (.*) http://zanshin.net/$1 [R=Permanent]
+# change 7/2/2012
+RewriteCond %{HTTP_HOST} ^www\.zanshin\.net$ [NC]
+RewriteRule ^(.*)$ http://zanshin.net/$1 [R=301,L]
+
 
 # added old MoveableType redirects as there are still links (kottke.org!) that use them
 Redirect 301 /blogs/001398.html http://zanshin.net/2007/12/29/moving/
