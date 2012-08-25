@@ -1,0 +1,61 @@
+#
+# SCM prompt handling
+#
+autoload -U colors && colors
+SCM_PROMPT_NEEDS_UPDATE=1
+
+# Run before executing a command; we use this to determine whether
+# we should update the prompt
+function scm_prompt_preexec {
+	case "$(history $HISTCMD)" in
+		*svn*|*git*|*hg*)
+			SCM_PROMPT_NEEDS_UPDATE=1
+			;;
+	esac
+}
+typeset -a preexec_functions
+preexec_functions+=scm_prompt_preexec
+
+# Force a prompt update when changing directories
+function scm_prompt_chpwd {
+	SCM_PROMPT_NEEDS_UPDATE=1
+}
+typeset -a chpwd_functions
+chpwd_functions+=scm_prompt_chpwd
+
+# Called before the prompt is displayed. We update the prompt here
+SCM_PROMPT_DEFAULT=${PROMPT}
+function scm_prompt_precmd {
+	if [ "${SCM_PROMPT_NEEDS_UPDATE}" != 1 ]; then
+		return
+	fi
+
+	# Reset the update flag
+	SCM_PROMPT_NEEDS_UPDATE=0
+
+	# Set up defaults
+	local scm_has_info=0
+	local scm_branch=""
+	local scm_repository=""
+	local scm_version=""
+
+	# Try SVN
+	if [ -d ".svn" ]; then
+		scm_has_info=1
+		#scm_branch=`svn info | grep '^URL:' | egrep -o '(tags|branches)/[^/]+|trunk' | egrep -o '[^/]+$'`
+		scm_branch=`svn info | grep '^URL:' | egrep -o '((tags|branches)/[^/]+|trunk).*' | sed -E -e 's/^(branches|tags)\///g'`
+		scm_repository=`svn info | grep '^Repository Root:' | egrep -o '(http|https|file|svn|svn+ssh)/[^/]+' | egrep -o '[^/]+$'`
+		scm_version=`svnversion -n`
+	fi
+	
+	# TODO: git+hg
+
+	if [ $scm_has_info = 1 ]; then
+		PROMPT="%n@%m:%{$fg[red]%}$scm_repository/$scm_branch@$scm_version%{$reset_color%}> "
+	else
+		# Restore the default prompt
+		PROMPT=${SCM_PROMPT_DEFAULT}
+	fi
+}
+typeset -a precmd_functions
+precmd_functions+=scm_prompt_precmd

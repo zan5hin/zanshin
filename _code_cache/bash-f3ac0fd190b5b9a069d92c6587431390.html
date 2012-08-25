@@ -1,0 +1,86 @@
+<div class="highlight"><pre><span class="c"># ----------------------------------------------------------------------------</span>
+<span class="c"># Using bits from Steve Losh</span>
+<span class="c">#	http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/</span>
+<span class="c"># ----------------------------------------------------------------------------</span>
+
+<span class="c"># ----------------------------------------------------------------------------</span>
+<span class="c"># Shows little symbol &#39;±&#39; if you&#39;re currently at a git repo,</span>
+<span class="c">#                     &#39;☿&#39; if you&#39;re currently at a hg repo,</span>
+<span class="c">#                     &#39;⚡&#39; if you&#39;re currently at a svn repo,</span>
+<span class="c">#                 and &#39;○&#39; all other times</span>
+<span class="c"># ----------------------------------------------------------------------------</span>
+<span class="k">function </span>prompt_char <span class="o">{</span>
+    git branch &gt;/dev/null 2&gt;/dev/null <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s1">&#39;±&#39;</span> <span class="o">&amp;&amp;</span> <span class="k">return</span>
+<span class="k">    </span>hg root &gt;/dev/null 2&gt;/dev/null <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s1">&#39;☿&#39;</span> <span class="o">&amp;&amp;</span> <span class="k">return</span>
+<span class="k">	</span>svn info &gt;/dev/null 2&gt;/dev/null <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s1">&#39;⚡&#39;</span> <span class="o">&amp;&amp;</span> <span class="k">return</span>
+<span class="k">    </span><span class="nb">echo</span> <span class="s1">&#39;○&#39;</span>
+<span class="o">}</span>
+
+<span class="c"># ----------------------------------------------------------------------------</span>
+<span class="c"># hg prompt</span>
+<span class="c"># depends upon ~/Projects/hg/hg-prompt</span>
+<span class="c"># ----------------------------------------------------------------------------</span>
+<span class="k">function </span>hg_prompt_info <span class="o">{</span>
+    hg prompt --angle-brackets <span class="s2">&quot;\</span>
+<span class="s2">&lt; on %{$fg[magenta]%}&lt;branch&gt;%{$reset_color%}&gt;\</span>
+<span class="s2">&lt; at %{$fg[yellow]%}&lt;tags|%{$reset_color%}, %{$fg[yellow]%}&gt;%{$reset_color%}&gt;\</span>
+<span class="s2">%{$fg[green]%}&lt;status|modified|unknown&gt;&lt;update&gt;%{$reset_color%}&lt;</span>
+<span class="s2">patches: &lt;patches|join( → )|pre_applied(%{$fg[yellow]%})|post_applied(%{$reset_color%})|pre_unapplied(%{$fg_bold[black]%})|post_unapplied(%{$reset_color%})&gt;&gt;&quot;</span> 2&gt;/dev/null
+<span class="o">}</span>
+
+<span class="c"># ----------------------------------------------------------------------------</span>
+<span class="c"># svn prompt</span>
+<span class="c"># based on: https://gist.github.com/1156969 </span>
+<span class="c"># with help from: http://andrewray.me/bash-prompt-builder/index.html</span>
+<span class="c"># ----------------------------------------------------------------------------</span>
+<span class="k">function </span>svn_prompt_info <span class="o">{</span>
+	<span class="c"># Set up defaults</span>
+	<span class="nb">local </span><span class="nv">svn_branch</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+	<span class="nb">local </span><span class="nv">svn_repository</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+	<span class="nb">local </span><span class="nv">svn_version</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+	<span class="nb">local </span><span class="nv">svn_change</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+
+	<span class="c"># only if we are in a directory that contains a .svn entry</span>
+	<span class="k">if</span> <span class="o">[</span> -d <span class="s2">&quot;.svn&quot;</span> <span class="o">]</span>; <span class="k">then</span>
+		<span class="c"># query svn info and parse the results</span>
+		<span class="nv">svn_branch</span><span class="o">=</span><span class="sb">`</span>svn info | grep <span class="s1">&#39;^URL:&#39;</span> | egrep -o <span class="s1">&#39;((tags|branches)/[^/]+|trunk).*&#39;</span> | sed -E -e <span class="s1">&#39;s/^(branches|tags)\///g&#39;</span><span class="sb">`</span>
+		<span class="nv">svn_repository</span><span class="o">=</span><span class="sb">`</span>svn info | grep <span class="s1">&#39;^Repository Root:&#39;</span> | egrep -o <span class="s1">&#39;(http|https|file|svn|svn+ssh)/[^/]+&#39;</span> | egrep -o <span class="s1">&#39;[^/]+$&#39;</span><span class="sb">`</span>
+		<span class="nv">svn_version</span><span class="o">=</span><span class="sb">`</span>svnversion -n<span class="sb">`</span>
+		
+		<span class="c"># this is the slowest test of the bunch</span>
+		<span class="nv">change_count</span><span class="o">=</span><span class="sb">`</span>svn status | grep <span class="s2">&quot;?\|\!\|M\|A&quot;</span> | wc -l<span class="sb">`</span>
+		<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$change_count&quot;</span> !<span class="o">=</span> <span class="s2">&quot;       0&quot;</span> <span class="o">]</span>; <span class="k">then</span>
+<span class="k">			</span><span class="nv">svn_change</span><span class="o">=</span><span class="s2">&quot; [dirty]&quot;</span>
+		<span class="k">else</span>
+<span class="k">			</span><span class="nv">svn_change</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+		<span class="k">fi</span>
+		
+		<span class="c"># show the results</span>
+		<span class="nb">echo</span> <span class="s2">&quot;%{$fg[blue]%}$svn_repository/$svn_branch @ $svn_version%{$reset_color%}%{$fg[yellow]%}$svn_change%{$reset_color%}&quot;</span>
+		
+	<span class="k">fi</span>
+<span class="o">}</span>
+
+<span class="c"># ----------------------------------------------------------------------------</span>
+<span class="c"># git prompt variables</span>
+<span class="c"># depends on using Steve Losh fork of oh-my-zsh</span>
+<span class="c"># ----------------------------------------------------------------------------</span>
+<span class="nv">ZSH_THEME_GIT_PROMPT_PREFIX</span><span class="o">=</span><span class="s2">&quot; on %{$fg[blue]%}&quot;</span>
+<span class="nv">ZSH_THEME_GIT_PROMPT_SUFFIX</span><span class="o">=</span><span class="s2">&quot;%{$reset_color%}&quot;</span>
+<span class="nv">ZSH_THEME_GIT_PROMPT_DIRTY</span><span class="o">=</span><span class="s2">&quot;%{$fg[yellow]%} [dirty]&quot;</span>
+<span class="nv">ZSH_THEME_GIT_PROMPT_UNTRACKED</span><span class="o">=</span><span class="s2">&quot;%{$fg[yellow]%} [untracked]&quot;</span>
+<span class="nv">ZSH_THEME_GIT_PROMPT_CLEAN</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+
+<span class="c"># ----------------------------------------------------------------------------</span>
+<span class="c"># zee prompt (ha ha)</span>
+<span class="c"># ----------------------------------------------------------------------------</span>
+<span class="nv">PROMPT</span><span class="o">=</span><span class="s1">&#39;</span>
+<span class="s1">%{$fg[blue]%}%n%{$reset_color%} at %{$fg[yellow]%}%m%{$reset_color%} in %{$fg[green]%}${PWD/#$HOME/~}%b%{$reset_color%}$(hg_prompt_info)$(git_prompt_info)$(svn_prompt_info)</span>
+<span class="s1">$(prompt_char) &#39;</span>
+
+<span class="c"># ----------------------------------------------------------------------------</span>
+<span class="c"># rubies are red, and so my Ruby version is too</span>
+<span class="c">#----------------------------------------------------------------------------</span>
+<span class="nv">RPROMPT</span><span class="o">=</span><span class="s1">&#39;%{$fg[red]%}$(rbenv version-name)%{$reset_color%}%&#39;</span>
+</pre>
+</div>

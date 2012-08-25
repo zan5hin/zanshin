@@ -1,0 +1,79 @@
+require 'fileutils'
+require 'date'
+require 'yaml'
+require 'rexml/document'
+include REXML
+
+
+doc = Document.new File.new(ARGV[0])
+
+FileUtils.mkdir_p "_posts"
+
+doc.elements.each("rss/channel/item[wp:status = 'publish' and wp:post_type = 'post']") do |e|
+    post = e.elements
+    slug = post['wp:post_name'].text
+    date = DateTime.parse(post['wp:post_date'].text)
+    name = "%02d-%02d-%02d-%s.markdown" % [date.year, date.month, date.day, slug]
+    date_string = date.year.to_s + "-" + date.month.to_s + '-' + date.day.to_s
+    
+    # clean up years of category randomness in one fell swoop. 
+    case post['category'].text
+    when "diversions", 
+         "elsewhere", 
+         "family", 
+         "health", 
+         "life", 
+         "meme", 
+         "nerdliness", 
+         "photography", 
+         "random", 
+         "relationships", 
+         "social issues"
+      category_string = post['category'].text
+      link_string = false
+    when "links"
+      category_string = post['category'].text
+      link_string = true
+    else
+      category_string = "life"
+      link_string = false
+    end
+
+    content_text = post['content:encoded'].text
+    
+    content = content_text.encode("UTF-8")
+
+    # convert <code></code> blocks to {% codeblock %}{% encodebloc %}
+    #content = content.gsub(/<code>(.*?)<\/code>/, '`\1`')
+    content = content.gsub(/<code>/, '{% codeblock %}')
+    content = content.gsub(/<\/code>/, '{% endcodeblock %}')
+
+    # convert <pre></pre> blocks to {% codeblock %}{% encodebloc %}
+    #content = content.gsub(/<pre lang="([^"]*)">(.*?)<\/pre>/m, '`\1`')
+    content = content.gsub(/<pre>/, '{% codeblock %}')
+    content = content.gsub(/<pre lang="([^"]*)">/, '{% codeblock %}')
+    content = content.gsub(/<\/pre>/m, '{% endcodeblock %}')
+    
+    
+    (1..3).each do |i|
+        content = content.gsub(/<h#{i}>([^<]*)<\/h#{i}>/, ('#'*i) + ' \1')
+    end
+
+    puts "Converting: #{name}"
+
+    data = {
+        'layout' => 'post',
+        'title' => post['title'].text,
+        'date' => date_string,
+        'comments' => true,
+        'categories' => category_string,
+        'link' => link_string
+     }.delete_if { |k,v| v.nil? || v == ''}.to_yaml
+
+     File.open("_posts/#{name}", "w") do |f|
+         f.puts data
+         f.puts "---"
+         f.puts content
+     end
+ 
+end

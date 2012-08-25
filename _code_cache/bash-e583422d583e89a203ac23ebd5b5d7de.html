@@ -1,0 +1,38 @@
+<div class="highlight"><pre><span class="c"># ----------------------------------------------------------------------------</span>
+<span class="c"># svn prompt</span>
+<span class="c"># based on: https://gist.github.com/1156969 </span>
+<span class="c"># with help from: http://andrewray.me/bash-prompt-builder/index.html</span>
+<span class="c"># </span>
+<span class="c"># Only the root directory holds the .svn repository. We need to test each directory in the current</span>
+<span class="c"># directory&#39;s path to determine if we are under Subversion control.</span>
+<span class="c"># ----------------------------------------------------------------------------</span>
+<span class="k">function </span>svn_prompt_info <span class="o">{</span>
+	<span class="c"># Set up defaults</span>
+	<span class="nb">local </span><span class="nv">svn_branch</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+	<span class="nb">local </span><span class="nv">svn_repository</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+	<span class="nb">local </span><span class="nv">svn_version</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+	<span class="nb">local </span><span class="nv">svn_change</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+
+	<span class="c"># if `svn info` returns more than 1 line, we are under subversion control</span>
+    <span class="nv">testsvn</span><span class="o">=</span><span class="sb">`</span>svn info &gt; /dev/null 2&gt;&amp;1 | wc -l<span class="sb">`</span>
+    <span class="k">if</span> <span class="o">[</span> <span class="nv">$testsvn</span> -gt 1 <span class="o">]</span> ; <span class="k">then</span>
+		<span class="c"># query svn info and parse the results</span>
+		<span class="nv">svn_branch</span><span class="o">=</span><span class="sb">`</span>svn info | grep <span class="s1">&#39;^URL:&#39;</span> | egrep -o <span class="s1">&#39;((tags|branches)/[^/]+|trunk).*&#39;</span> | sed -E -e <span class="s1">&#39;s/^(branches|tags)\///g&#39;</span><span class="sb">`</span>
+		<span class="nv">svn_repository</span><span class="o">=</span><span class="sb">`</span>svn info | grep <span class="s1">&#39;^Repository Root:&#39;</span> | egrep -o <span class="s1">&#39;(http|https|file|svn|svn+ssh)/[^/]+&#39;</span> | egrep -o <span class="s1">&#39;[^/]+$&#39;</span><span class="sb">`</span>
+		<span class="nv">svn_version</span><span class="o">=</span><span class="sb">`</span>svnversion -n<span class="sb">`</span>
+		
+		<span class="c"># this is the slowest test of the bunch</span>
+		<span class="nv">change_count</span><span class="o">=</span><span class="sb">`</span>svn status | grep <span class="s2">&quot;?\|\!\|M\|A&quot;</span> | wc -l<span class="sb">`</span>
+		<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$change_count&quot;</span> !<span class="o">=</span> <span class="s2">&quot;       0&quot;</span> <span class="o">]</span>; <span class="k">then</span>
+<span class="k">			</span><span class="nv">svn_change</span><span class="o">=</span><span class="s2">&quot; [dirty]&quot;</span>
+		<span class="k">else</span>
+<span class="k">			</span><span class="nv">svn_change</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+		<span class="k">fi</span>
+		
+		<span class="c"># show the results</span>
+		<span class="nb">echo</span> <span class="s2">&quot;%{$fg[blue]%}$svn_repository/$svn_branch @ $svn_version%{$reset_color%}%{$fg[yellow]%}$svn_change%{$reset_color%}&quot;</span>
+		
+	<span class="k">fi</span>
+<span class="o">}</span>
+</pre>
+</div>

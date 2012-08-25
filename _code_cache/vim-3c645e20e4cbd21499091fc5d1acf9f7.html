@@ -1,0 +1,236 @@
+<div class="highlight"><pre><span class="c">&quot; .vimrc</span>
+<span class="c">&quot; Author: Mark Nichols</span>
+<span class="c">&quot; largely copied from Steve Losh (stevelosh.com)</span>
+<span class="c">&quot; addition bits borrowed from https://github.com/nvie/vimrc/blob/master/vimrc</span>
+<span class="c">&quot; further bits from http://vimcasts.org</span>
+<span class="c">&quot; also, https://github.com/lukaszkorecki/DOtFiles </span>
+<span class="c">&quot;</span>
+<span class="c">&quot; ---------------------------------------------------------------------------------</span>
+<span class="c">&quot; use Vim settings rather than vi settings (must be first) </span>
+<span class="c">&quot; ---------------------------------------------------------------------------------</span>
+<span class="k">set</span> <span class="nb">nocompatible</span>
+
+<span class="c">&quot; ---------------------------------------------------------------------------------</span>
+<span class="c">&quot; setup Pathogen to manage plugins</span>
+<span class="c">&quot; ---------------------------------------------------------------------------------</span>
+<span class="k">filetype</span> off                  <span class="c">&quot; force reloading after pathogen loaded</span>
+<span class="k">call</span> pathogen#<span class="k">helptags</span><span class="p">()</span>
+<span class="k">call</span> pathogen#runtime_append_all_bundles<span class="p">()</span>
+<span class="k">filetype</span> plugin indent <span class="k">on</span>     <span class="c">&quot; enable plugins, detection and indenting in one step</span>
+
+<span class="c">&quot; ---------------------------------------------------------------------------------</span>
+<span class="c">&quot; change mapleader from \ to , </span>
+<span class="c">&quot; ---------------------------------------------------------------------------------</span>
+<span class="k">let</span> mapleader<span class="p">=</span><span class="s1">&#39;,&#39;</span>
+
+<span class="c">&quot; ---------------------------------------------------------------------------------</span>
+<span class="c">&quot; basic options</span>
+<span class="c">&quot; ---------------------------------------------------------------------------------</span>
+<span class="k">set</span> <span class="nb">encoding</span><span class="p">=</span>utf<span class="m">-8</span>
+<span class="k">set</span> <span class="nb">modelines</span><span class="p">=</span><span class="m">0</span>
+<span class="k">set</span> <span class="nb">tabstop</span><span class="p">=</span><span class="m">4</span>                   <span class="c">&quot; a tab stop is 4 spaces</span>
+<span class="k">set</span> <span class="nb">shiftwidth</span><span class="p">=</span><span class="m">4</span>                <span class="c">&quot; number of spaces to use for autoindenting</span>
+<span class="k">set</span> <span class="nb">softtabstop</span><span class="p">=</span><span class="m">4</span>               <span class="c">&quot; when &lt;BS&gt;, pretend a tab is removed, even if spaces</span>
+<span class="k">set</span> <span class="nb">expandtab</span>                   <span class="c">&quot; expand tabs to spaces (overloadable by file type later)</span>
+<span class="k">set</span> <span class="nb">scrolloff</span><span class="p">=</span><span class="m">3</span>                 <span class="c">&quot; keep 3 lines off the edges of the screen when scrolling</span>
+<span class="k">set</span> <span class="nb">autoindent</span>                  <span class="c">&quot; always set autoindenting on</span>
+<span class="k">set</span> <span class="nb">showmode</span>                    <span class="c">&quot; always show what mode we&#39;re in</span>
+<span class="k">set</span> <span class="nb">showcmd</span>
+<span class="k">set</span> <span class="nb">hidden</span>
+<span class="k">set</span> <span class="nb">wildmenu</span>
+<span class="k">set</span> <span class="nb">wildmode</span><span class="p">=</span><span class="nb">list</span>:longest
+<span class="k">set</span> <span class="nb">visualbell</span>
+<span class="k">set</span> <span class="nb">cursorline</span>
+<span class="k">set</span> <span class="nb">ttyfast</span>
+<span class="k">set</span> <span class="nb">ruler</span>                       <span class="c">&quot; show row,col in status area</span>
+<span class="k">set</span> <span class="nb">backspace</span><span class="p">=</span>indent<span class="p">,</span><span class="nb">eol</span><span class="p">,</span><span class="k">start</span>  <span class="c">&quot; allow backspacing over everything in insert mode</span>
+<span class="k">set</span> <span class="k">history</span><span class="p">=</span><span class="m">1000</span>
+<span class="k">set</span> undodir<span class="p">=~</span><span class="sr">/.tmp/</span>undodir      <span class="c">&quot; set unfo file location</span>
+<span class="k">set</span> undofile
+<span class="k">set</span> <span class="nb">backupdir</span><span class="p">=~</span><span class="sr">/.tmp            &quot; set backup directory to ~/</span>.tmp
+<span class="k">set</span> <span class="nb">directory</span><span class="p">=~</span>/.tmp
+<span class="k">set</span> <span class="nb">ffs</span><span class="p">=</span>unix<span class="p">,</span>mac<span class="p">,</span>dos            <span class="c">&quot; default file types</span>
+<span class="k">set</span> <span class="k">spell</span>                       <span class="c">&quot; turn spell check on</span>
+
+<span class="c">&quot; use relatice (offset) line number only in active window split</span>
+<span class="k">set</span> relativenumber
+<span class="p">:</span>au <span class="nb">WinEnter</span> * :<span class="k">setlocal</span> relativenumber
+<span class="p">:</span>au <span class="nb">WinLeave</span> * :<span class="k">setlocal</span> <span class="nb">nonumber</span>
+
+<span class="c">&quot; automatically resize vertical splits to maximize current split</span>
+<span class="p">:</span>au <span class="nb">WinEnter</span> * :<span class="k">set</span> <span class="nb">winfixheight</span>
+<span class="p">:</span>au <span class="nb">WinEnter</span> * :<span class="k">wincmd</span> <span class="p">=</span>
+
+<span class="c">&quot; ---------------------------------------------------------------------------------</span>
+<span class="c">&quot; Editor layout</span>
+<span class="c">&quot; ---------------------------------------------------------------------------------</span>
+<span class="k">set</span> <span class="nb">termencoding</span><span class="p">=</span>utf<span class="m">-8</span>
+<span class="k">set</span> <span class="nb">encoding</span><span class="p">=</span>utf<span class="m">-8</span>
+<span class="k">set</span> <span class="nb">lazyredraw</span>                  <span class="c">&quot; don&#39;t update the display while executing macros</span>
+<span class="k">set</span> <span class="nb">laststatus</span><span class="p">=</span><span class="m">2</span>                <span class="c">&quot; tell Vim to always put a status line in,</span>
+<span class="c">                                &quot;   even if there is only one window</span>
+<span class="k">set</span> <span class="nb">cmdheight</span><span class="p">=</span><span class="m">2</span>                 <span class="c">&quot; ues a status bar that is two rows high </span>
+
+<span class="c">&quot; set options based on whether we&#39;re in the GUI or terminal</span>
+<span class="c">&quot; Mostly we&#39;re hiding the toolbar in MacVim</span>
+<span class="k">if</span> has<span class="p">(</span><span class="s2">&quot;gui_running&quot;</span><span class="p">)</span>
+    <span class="k">set</span> <span class="nb">guioptions</span><span class="p">=</span>egmrt
+    <span class="k">set</span> <span class="nb">guioptions</span><span class="p">-=</span>T
+    <span class="k">set</span> <span class="nb">t_Co</span><span class="p">=</span><span class="m">256</span>
+    <span class="k">set</span> <span class="nb">background</span><span class="p">=</span><span class="nb">dark</span>
+    <span class="k">colorscheme</span> solarized
+    <span class="k">set</span> <span class="nb">showtabline</span><span class="p">=</span><span class="m">2</span>           <span class="c">&quot; always show tabbar in gui</span>
+<span class="k">else</span>
+    <span class="k">colorscheme</span> solarized
+    <span class="k">set</span> <span class="nb">background</span><span class="p">=</span><span class="nb">dark</span>
+<span class="k">endif</span>
+
+<span class="c">&quot; Fonts</span>
+<span class="k">set</span> <span class="nb">gfn</span><span class="p">=</span>Menlo:h11
+<span class="k">set</span> <span class="k">shell</span><span class="p">=</span><span class="sr">/bin/</span>zsh
+
+<span class="c">&quot; ---------------------------------------------------------------------------------</span>
+<span class="c">&quot; moving and searching</span>
+<span class="c">&quot; ---------------------------------------------------------------------------------</span>
+nnoremap <span class="sr">/ /</span>\v
+vnoremap <span class="sr">/ /</span>\v
+<span class="k">set</span> <span class="nb">ignorecase</span>                  <span class="c">&quot; ignore case while searching</span>
+<span class="k">set</span> <span class="nb">smartcase</span>                   <span class="c">&quot; ignore case if search string is all lower case</span>
+<span class="c">                                &quot;    case-sensitive otherwise</span>
+<span class="k">set</span> <span class="nb">gdefault</span>                    <span class="c">&quot; search/replace globally (on a line) by default</span>
+<span class="k">set</span> <span class="nb">incsearch</span>                   <span class="c">&quot; allow search matches as you type</span>
+<span class="k">set</span> <span class="nb">showmatch</span>                   <span class="c">&quot; set show matching parens</span>
+<span class="k">set</span> <span class="nb">hlsearch</span>                    <span class="c">&quot; highlight search terms</span>
+nnoremap <span class="p">&lt;</span>leader<span class="p">&gt;&lt;</span>space<span class="p">&gt;</span> :<span class="k">noh</span><span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
+nnoremap <span class="p">&lt;</span><span class="k">tab</span><span class="p">&gt;</span> %
+vnoremap <span class="p">&lt;</span><span class="k">tab</span><span class="p">&gt;</span> %
+
+<span class="c">&quot; ---------------------------------------------------------------------------------</span>
+<span class="c">&quot; handle long lines</span>
+<span class="c">&quot; ---------------------------------------------------------------------------------</span>
+<span class="k">set</span> <span class="nb">wrap</span>
+<span class="k">set</span> <span class="nb">textwidth</span><span class="p">=</span><span class="m">79</span>
+<span class="k">set</span> <span class="nb">formatoptions</span><span class="p">=</span>qrn1
+<span class="k">set</span> colorcolumn<span class="p">=</span><span class="m">85</span>
+
+<span class="c">&quot; show invisible characters ala TextMate</span>
+<span class="k">set</span> <span class="nb">list</span>
+<span class="k">set</span> <span class="nb">listchars</span><span class="p">=</span><span class="k">tab</span>:▸\ <span class="p">,</span><span class="nb">eol</span>:¬<span class="p">,</span>extends:❯<span class="p">,</span>precedes:❮
+
+<span class="c">&quot; ---------------------------------------------------------------------------------</span>
+<span class="c">&quot; add TextMate indentation key mappings</span>
+<span class="c">&quot; ---------------------------------------------------------------------------------</span>
+nmap <span class="p">&lt;</span>D<span class="p">-</span>[<span class="p">&gt;</span> <span class="p">&lt;&lt;</span>
+nmap <span class="p">&lt;</span>D<span class="p">-</span>]<span class="p">&gt;</span> <span class="p">&gt;&gt;</span>
+nmap <span class="p">&lt;</span>D<span class="p">-</span>[<span class="p">&gt;</span> <span class="p">&lt;</span>gv
+nmap <span class="p">&lt;</span><span class="k">d</span><span class="p">-</span>]<span class="p">&gt;</span> <span class="p">&gt;</span>gv
+
+<span class="c">&quot; ---------------------------------------------------------------------------------</span>
+<span class="c">&quot; force hjkl movement keys. painful but essential</span>
+<span class="c">&quot; ---------------------------------------------------------------------------------</span>
+nnoremap <span class="p">&lt;</span><span class="k">up</span><span class="p">&gt;</span> <span class="p">&lt;</span>nop<span class="p">&gt;</span>
+nnoremap <span class="p">&lt;</span>down<span class="p">&gt;</span> <span class="p">&lt;</span>nop<span class="p">&gt;</span>
+nnoremap <span class="p">&lt;</span><span class="k">left</span><span class="p">&gt;</span> <span class="p">&lt;</span>nop<span class="p">&gt;</span>
+nnoremap <span class="p">&lt;</span><span class="k">right</span><span class="p">&gt;</span> <span class="p">&lt;</span>nop<span class="p">&gt;</span>
+inoremap <span class="p">&lt;</span><span class="k">up</span><span class="p">&gt;</span> <span class="p">&lt;</span>nop<span class="p">&gt;</span>
+inoremap <span class="p">&lt;</span>down<span class="p">&gt;</span> <span class="p">&lt;</span>nop<span class="p">&gt;</span>
+inoremap <span class="p">&lt;</span><span class="k">right</span><span class="p">&gt;</span> <span class="p">&lt;</span>nop<span class="p">&gt;</span>
+inoremap <span class="p">&lt;</span><span class="k">left</span><span class="p">&gt;</span> <span class="p">&lt;</span>nop<span class="p">&gt;</span>
+nnoremap <span class="k">j</span> gj
+nnoremap <span class="k">k</span> gk
+
+<span class="c">&quot; remap the help key</span>
+<span class="c">&quot; inoremap &lt;F1&gt; &lt;ESC&gt;</span>
+<span class="c">&quot; nnoremap &lt;F1&gt; &lt;ESC&gt;</span>
+<span class="c">&quot; vnoremap &lt;F1&gt; &lt;ESC&gt;</span>
+<span class="c">&quot;</span>
+<span class="c">&quot; ---------------------------------------------------------------------------------</span>
+<span class="c">&quot; remap ; to :, save a keystroke</span>
+<span class="c">&quot; ---------------------------------------------------------------------------------</span>
+nnoremap ; :
+
+<span class="c">&quot; ---------------------------------------------------------------------------------</span>
+<span class="c">&quot; save on losing focus</span>
+<span class="c">&quot; ---------------------------------------------------------------------------------</span>
+au <span class="nb">FocusLost</span> * :<span class="k">wa</span>
+
+<span class="c">&quot; ---------------------------------------------------------------------------------</span>
+<span class="c">&quot; map jj to ESC for quicker escaping</span>
+<span class="c">&quot; ---------------------------------------------------------------------------------</span>
+inoremap jj <span class="p">&lt;</span>ESC<span class="p">&gt;</span>
+
+<span class="c">&quot; ---------------------------------------------------------------------------------</span>
+<span class="c">&quot; stuff for working with split windows</span>
+<span class="c">&quot; ---------------------------------------------------------------------------------</span>
+nnoremap <span class="p">&lt;</span>leader<span class="p">&gt;</span><span class="k">w</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">w</span><span class="p">&gt;</span>v<span class="p">&lt;</span>C<span class="p">-</span><span class="k">w</span><span class="p">&gt;</span><span class="k">l</span>
+nnoremap <span class="p">&lt;</span>C<span class="p">-</span><span class="k">h</span><span class="p">&gt;</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">w</span><span class="p">&gt;</span><span class="k">h</span>  
+nnoremap <span class="p">&lt;</span>C<span class="p">-</span><span class="k">j</span><span class="p">&gt;</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">w</span><span class="p">&gt;</span><span class="k">j</span>
+nnoremap <span class="p">&lt;</span>C<span class="p">-</span><span class="k">k</span><span class="p">&gt;</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">w</span><span class="p">&gt;</span><span class="k">k</span>
+nnoremap <span class="p">&lt;</span>C<span class="p">-</span><span class="k">l</span><span class="p">&gt;</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">w</span><span class="p">&gt;</span><span class="k">l</span>
+
+<span class="c">&quot; ---------------------------------------------------------------------------------</span>
+<span class="c">&quot; shortcut to open vimrc file and stuff to automagically update it on the fly</span>
+<span class="c">&quot; turned off as it takes a HUGELY long time to save the buffer with it on</span>
+<span class="c">&quot; ---------------------------------------------------------------------------------</span>
+<span class="c">&quot; if has(&quot;autocmd&quot;)</span>
+<span class="c">&quot;    autocmd bufwritepost .vimrc source $MYVIMRC</span>
+<span class="c">&quot; endif</span>
+
+<span class="c">&quot; ---------------------------------------------------------------------------------</span>
+<span class="c">&quot; shortcut to edit .vimrc file</span>
+<span class="c">&quot; ---------------------------------------------------------------------------------</span>
+nmap <span class="p">&lt;</span>leader<span class="p">&gt;</span>v :<span class="k">tabedit</span> $MYVIMRC<span class="p">&lt;</span>CR<span class="p">&gt;</span>
+
+<span class="c">&quot; ---------------------------------------------------------------------------------</span>
+<span class="c">&quot; control whitespace preferences based on filetype, uses autocmd</span>
+<span class="c">&quot; ---------------------------------------------------------------------------------</span>
+<span class="k">if</span> has<span class="p">(</span><span class="s2">&quot;autocmd&quot;</span><span class="p">)</span>
+<span class="c">    &quot; enable file type detection</span>
+    <span class="k">filetype</span> <span class="k">on</span>
+
+<span class="c">    &quot; syntax of these languages is fussy over tabs Vs spaces</span>
+    autocmd <span class="nb">FileType</span> <span class="k">make</span> <span class="k">setlocal</span> <span class="k">ts</span><span class="p">=</span><span class="m">8</span> <span class="k">sts</span><span class="p">=</span><span class="m">8</span> <span class="nb">sw</span><span class="p">=</span><span class="m">8</span> <span class="nb">noexpandtab</span>
+    autocmd <span class="nb">FileType</span> yaml <span class="k">setlocal</span> <span class="k">ts</span><span class="p">=</span><span class="m">2</span> <span class="k">sts</span><span class="p">=</span><span class="m">2</span> <span class="nb">sw</span><span class="p">=</span><span class="m">2</span> <span class="nb">expandtab</span>
+
+<span class="c">    &quot; treat .rss files as XML</span>
+    autocmd <span class="nb">BufNewFile</span><span class="p">,</span><span class="nb">BufRead</span> *.rss<span class="p">,</span>*.atom <span class="k">setfiletype</span> xml
+
+<span class="c">    &quot; markdown filetype</span>
+    autocmd <span class="nb">BufNewFile</span><span class="p">,</span><span class="nb">BufRead</span> *.md<span class="p">,</span> *.mkd<span class="p">,</span> *.markdown <span class="k">setfiletype</span> markdown
+    autocmd <span class="nb">BufNewFile</span><span class="p">,</span><span class="nb">BufRead</span> *.md<span class="p">,</span> *.mkd<span class="p">,</span> *.markdown <span class="k">set</span> <span class="k">spell</span>
+
+<span class="c">    &quot; non ruby files related to Ruby</span>
+    autocmd <span class="nb">BufNewFile</span><span class="p">,</span><span class="nb">BufRead</span> Gemfile<span class="p">,</span>Gemfile.<span class="k">lock</span><span class="p">,</span>Guardfile <span class="k">setfiletype</span> <span class="k">ruby</span>
+
+    autocmd <span class="nb">BufNewFile</span><span class="p">,</span><span class="nb">BufRead</span> Rakefile <span class="k">setfiletype</span> rake
+    autocmd <span class="nb">BufNewFile</span><span class="p">,</span><span class="nb">BufRead</span> Rakefile <span class="k">set</span> <span class="nb">syntax</span><span class="p">=</span><span class="k">ruby</span>
+
+    autocmd <span class="nb">BufNewFile</span><span class="p">,</span><span class="nb">BufRead</span> *.rake <span class="k">setfiletype</span> rake
+    autocmd <span class="nb">BufNewFile</span><span class="p">,</span><span class="nb">BufRead</span> *.rake <span class="k">set</span> <span class="nb">syntax</span><span class="p">=</span><span class="k">ruby</span>
+
+<span class="c">    &quot; Python specific settings</span>
+    <span class="k">let</span> NERDTreeIgnore <span class="p">=</span> [<span class="s1">&#39;\.pyc$&#39;</span><span class="p">,</span> <span class="s1">&#39;\~$&#39;</span><span class="p">,</span> <span class="s1">&#39;\.rbc$&#39;</span>]
+    autocmd <span class="nb">BufNewFile</span><span class="p">,</span><span class="nb">BufRead</span> *.<span class="k">py</span> <span class="k">set</span> <span class="k">ts</span><span class="p">=</span><span class="m">2</span> <span class="k">sts</span><span class="p">=</span><span class="m">2</span> <span class="nb">sw</span><span class="p">=</span><span class="m">2</span> expandtav
+<span class="k">endif</span>
+
+<span class="c">&quot; ---------------------------------------------------------------------------------</span>
+<span class="c">&quot; stuff for bundles</span>
+<span class="c">&quot; ---------------------------------------------------------------------------------</span>
+<span class="c">&quot; NERDTree</span>
+<span class="c">&quot; toggle NERDTRee on or off via F2</span>
+map <span class="p">&lt;</span>F2<span class="p">&gt;</span> :NERDTreeToggle<span class="p">&lt;</span>CR<span class="p">&gt;</span>
+<span class="k">let</span> NERDTreeMinimalUI<span class="p">=</span><span class="m">1</span>
+<span class="k">let</span> NERDTreeDirArrows<span class="p">=</span><span class="m">1</span>
+<span class="c">&quot; let NERDTreeWinSize=40</span>
+
+<span class="c">&quot; NERDCommenter</span>
+<span class="c">&quot; &lt;leader&gt;c </span>
+<span class="c">&quot;</span>
+<span class="c">&quot; Gundo</span>
+nnoremap <span class="p">&lt;</span>F5<span class="p">&gt;</span> :GundoToggle<span class="p">&lt;</span>CR<span class="p">&gt;</span>
+
+<span class="c">&quot; ---------------------------------------------------------------------------------</span>
+<span class="c">&quot;  finis</span>
+<span class="c">&quot; ---------------------------------------------------------------------------------</span>
+</pre>
+</div>
