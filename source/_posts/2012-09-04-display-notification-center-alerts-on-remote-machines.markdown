@@ -39,3 +39,6 @@ With this function in place all I need to do to create a new alert is
 	
 ##Step 5: Profit!
 Now I can create alerts on any of the (Mountain Lion) computers I use, from any other computer I use simply by secure shelling into them and running one command.
+
+##Update
+After getting all of this to work, you may wish to visit the Notifications panel of System Preferences. In the list of alerts under "in Notification Center" you'll find an entry for "Automator Runner". Changing its display style from the default "Banners" to "Alerts" will cause any command line triggered alert to be sticky, requiring your dismissal. Excellent.
