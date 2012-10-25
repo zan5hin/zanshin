@@ -78,8 +78,10 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name: zanshinnet
-disqus_show_comment_count: true
+# disqus_short_name: zanshinnet
+# disqus_show_comment_count: true
+disqus_short_name: 
+disqus_show_comment_count: 
 
 # Google Analytics
 google_analytics_tracking_id: UA-373283-1
