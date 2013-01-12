@@ -3,7 +3,7 @@ layout: post
 title: "Year by Year Statistics"
 date: 2013-01-01 08:39
 comments: true
-categories: nerliness
+categories: nerdliness
 link: false
 ---
 With the turn of a new year I was curious how many postings I made in the past 12 months, and how many words I had written on my sites.
