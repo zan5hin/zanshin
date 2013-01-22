@@ -8,7 +8,7 @@ link: false
 ---
 Updated: 21 January 2013
 
-> Saving all three directories under the Sublime Text 2 entry in `~/Library Application Support` is overkill. You really only need to keep the `~/Library/Application Support/Sublime Text 2/Packages/User` directory. Read [Sublime Text 2 Dotfiles Simplified](http://zanshin.net/2013-01-21-sublime-text-2-dotfiles-simplified "Sublime Tecxt 2 Dotfiles Simplified") for a more complete explanation and write up.
+> Saving all three directories under the Sublime Text 2 entry in `~/Library Application Support` is overkill. You really only need to keep the `~/Library/Application Support/Sublime Text 2/Packages/User` directory. Read [Sublime Text 2 Dotfiles Simplified](http://zanshin.net/2013/01/21/sublime-text-2-dotfiles-simplified/ "Sublime Tecxt 2 Dotfiles Simplified") for a more complete explanation and write up.
 
 After reading more and more about [Sublime Text 2](http://www.sublimetext.com/ "Sublime Text") I decided to give it a try. The first thing you do with any new software is tweak the preferences and settings to suit your needs and aesthetics. Sublime Text 2 stores settings, themes, and plugins in the `~/Library/Application Support/Sublime Text 2` directory in three separate folders:
 
