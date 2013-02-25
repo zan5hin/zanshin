@@ -6,24 +6,24 @@ comments: true
 categories: life
 link: false
 ---
-Olive oil
-1 package chicken breasts, rinsed and cut into cubes
-1 medium onion, finely chopped
-1/2 medium green pepper, finely chopped
-2-3 garlic cloves, finely chopped
-1 can diced or finely diced tomatoes
-1 Tablespoon fresh lemon juice
-2 bay leaves
-1-2 tablespoons parsley
-Salt
-Pepper
-5-6 squirts Tabasco
-3 1/2 cups chicken stock (1 package)
-1 package yellow rice (I use Vigo brand)
-1 Can peas
-Pimento
+Olive oil  
+1 package chicken breasts, rinsed and cut into cubes  
+1 medium onion, finely chopped  
+1/2 medium green pepper, finely chopped  
+2-3 garlic cloves, finely chopped  
+1 can diced or finely diced tomatoes  
+1 Tablespoon fresh lemon juice  
+2 bay leaves  
+1-2 tablespoons parsley  
+Salt  
+Pepper  
+5-6 squirts Tabasco  
+3 1/2 cups chicken stock (1 package)  
+1 package yellow rice (I use Vigo brand)  
+1 Can peas    
+Pimento  
 
-Heat 2-3 tablespoons oil over moderate heat in non-stick frying pan. Add chicken and cook until pale gold. Season with salt and pepper, turning frequently to evenly brown all sides. Transfer to heavy ovenproof casserole or stew pot with tight fitting lid.
+Heat 2-3 tablespoons oil over moderate heat in non-stick frying pan. Add chicken and cook until pale gold. Season with salt and pepper, turning frequently to evenly brown all sides. Transfer to heavy oven proof casserole or stew pot with tight fitting lid.
 
 Sauté onion and green pepper in left over oil from chicken. Season with salt and pepper and cook until onion starts to turn gold. Toss in garlic and stir for another minute and then add can of diced tomatoes. Stir together and then pour mixture over chicken.
 
