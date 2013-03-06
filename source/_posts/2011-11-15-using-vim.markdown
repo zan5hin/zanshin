@@ -132,7 +132,7 @@ themselves, you simply clone the appropriate repository inside your
 **./vim/bundle** directory and you are good to go. 
 
 However, since your **.vim** directory is contained inside a Git repository you
-should use [Git submodules](book.git-scm.com/5_submodules.html "Git
+should use [Git submodules](http://git-scm.com/book/en/Git-Tools-Submodules "Git
 submodules") to manage plugins which are themselves Git repositories. 
 
 From the root of your Vim configuration repository use **git submodule add** to
