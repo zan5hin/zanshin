@@ -1,0 +1,51 @@
+---
+layout: post
+title: "My Setup"
+date: 2013-03-29 23:31
+comments: true
+categories: nerdliness
+link: false
+---
+The [Uses This](http://usesthis.com "Uses This") series, and Shawn Blanc's [Sweet Mac Setups](http://shawnblanc.net/sweet-mac-setups/ "Sweet Mac Setups") series have always intrigued me, so I decided to write one of my own.
+
+##Who are you and what do you do?
+My name is Mark Nichols. I'm married to [Sibylle Kuder](http://sibyllekuder.com "Sibylle Kuder Piano Studio"), I play [violoncello](http://cello.zanshin.net "Solfège"), I hack around with [various computer technologies](http://github/com/zan5hin "My GitHub"), and I'm an all-around good guy. Professionally I work for Kansas State University as an "Integration Services Coordinator" — dealing with the sometimes messy intersection of differing systems and their needs.
+
+##What hardware do you use?
+My personal computer is a [15" 2009 MacBook Pro](http://support.apple.com/kb/SP544?viewlocale=en_US&locale=en_US "15-inch Mid 2009") with a 2.66 GHz Core 2 Duo processor and 8 GB of RAM. Within the next week the original 320 GB hard drive will be replaced with a new 1 TB drive.
+
+I also have a 16GB iPad Mini that is easily one of the nicest computers I have ever owned. My phone is a 16GB iPhone 5 on AT&t.
+
+My employer provides me with wonderful tools, so I have on my desk a 27" iMac with a 256GB SSD and a 1 TB spinning drive. My work laptop is a 13" Retina MacBook Pro, with a 500 GB SSD and 8 GB of RAM. It *is* the sweetest computer I've ever had the pleasure of using. 
+
+Tunes in my car are provided via an iPod Nano. I have an aging (no longer holds a charge but works fine pluged in) 30 GB 5th Generation iPod that holds most of my music and lives in the corner of the house where I practice my cello, so that I can listen to the pieces I am learning.
+
+My cello is a Eastman 100 fitted with Jargar Strings and played with a CodaBow Diamond SX bow. I use Gribaldi rosin. 
+
+For printing we have a newly purchased HP OfficeJet 8600 All-in-One printer/copier/fax/scanner. It's beautiful, it's wireless, and it prints like a dream.
+
+At work I use a pair of Apple EarPods to listen to music or videos. At home I use a variety of earbud style earphones, but only when the cat isn't around. She considers them string with which to be toyed.
+
+##And what software?
+Sublime Text 2, Vim, tmux, and iTerm2 for most coding. IntelliJ for Java, and XCode for Cocoa and iOS development.
+
+Safari for 99% of my browsing and Google Chrome on rare occasion. 
+
+Adium for instant message chat and IRC. Twitterrific for Twitter. 
+
+Fetch handles my SFTP needs, although I am making more and more use of sshfs for accessing remote drives.
+
+Growl for notifications and Alfred for Cmd-Space-ing things.
+
+TakeFive helps me to control what's playing, and Cobook gives me access to my contacts. 
+
+F.Lux dims my laptop screen at night, and brightens it during the daylight hours. 
+
+Dropbox for convenient movement of files between computers, and Git for version control of all my coding projects. 
+
+##What would be your dream setup?
+After spending a couple weeks with the 13" Retina MacBook Pro I would be hard pressed to consider any other machine. Well, maybe the 15" Retina MacBook Pro. 
+
+I'd like a dead simple storage system that hung off our router that would let Sibylle backup her Windows-based machines and me back up my OS X-based machines seamlessly. And perhaps a Mac Mini tied to a couple large drives to house all our music and DVD movies.
+
+I'm intrigued by the Sonos Speaker systems, but other priorities have kept that on the someday list.
