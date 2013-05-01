@@ -6,6 +6,21 @@ comments: true
 categories: nerdliness
 link: false
 ---
+**Updated: May 1, 2013**
+The steps below also work for Mac OS X Mountain Lion (10.8) with a couple of minor alterations.
+
+The format of the entries in `/etc/services` puts the UDP or TCP designator after the port number instead of after the service name. So they should look like this:
+
+    ssh2 11122/tcp # my ssh port
+    ssh2 11122/udp # my ssh port
+
+And in order to unload and reload the `ssh.plist` you'll have to `sudo`.
+
+    $ sudo launchctl unload /System/Library/LaunchDaemons/ssh.plist
+    $ sudo launchctl load /System/Library/LaunchDaemons/ssh.plist
+
+**End of Update**
+
 My employer is getting ready to block all access to the usual ssh port (22). While this may seem like a security-through-obscurity measure it does eliminate the endless pounding of scripts against that well-known port. In preparation for the upcoming block on port 22 I followed the steps outlined in [Mac OS X Lion - Changing SSHD Port](http://robsavino.wordpress.com/2011/08/09/mac-os-x-lion-changing-sshd-port "Mac OS X Lion - Changing SSHD Port") to permanently change the ssh port on all my machines.
 
 In a nutshell you first edit the `/etc/services` file and add an entry for the port number you wish to use for secure shell access. Pick one that isn't already used for something else, e.g., **11122**. Add two lines to the services file, one for TCP and one for UDP:
