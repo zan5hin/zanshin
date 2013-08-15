@@ -9,7 +9,7 @@ link: false
 Recently I have been enjoying several recurring email newsletters. Several are weekly and a couple are monthly. Unlike a website, where I have to remember to periodically go look for fresh content, these come to me. Also, they all aggregate multiple stories around their topic into one convenient place for me.
 
 **Ray's Monthly Newsletter**  
-Ray Wenderlich's newsletter is iOS centric, and is an excellent companion to his website, [raywenderlich.com](raywenderlich.com  "Ray Wenderlich - Tutorials for iPhone / iOS Development and Gamers"). Lots of tutorials and iOS centered articles.
+Ray Wenderlich's newsletter is iOS centric, and is an excellent companion to his website, [http://raywenderlich.com](raywenderlich.com  "Ray Wenderlich - Tutorials for iPhone / iOS Development and Gamers"). Lots of tutorials and iOS centered articles.
 
 **Ruby Weekly**  
 A weekly roundup of Ruby specific events, reading, libraries and code, tools, and some featured articles. [Ruby Weekly](http://rubyweekly.com "Ruby Weekly") always has something I find interesting.
