@@ -22,19 +22,7 @@ coding and showing each path entry on its own line.
 
 Here's a sample of the output:
 
-    /Users/mark/.rvm/gems/ruby-1.9.3-p374/bin
-    /Users/mark/.rvm/gems/ruby-1.9.3-p374@global/bin
-    /Users/mark/.rvm/rubies/ruby-1.9.3-p374/bin
-    /Users/mark/.rvm/bin
-    /usr/local/bin
-    /usr/bin
-    /bin
-    /usr/sbin
-    /sbin
-    /opt/X11/bin
-    /usr/local/MacGPG2/bin
-    /usr/local/sbin
-    /Users/mark/bin
+{% img /images/path.png %}
 
 I find this function to be particularly useful when dealing with
 [RVM](https://rvm.io "RVM") and [Homebrew](http://brew.sh "Homebrew") as they
